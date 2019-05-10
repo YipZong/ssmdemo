@@ -19,7 +19,7 @@
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url"
-                  value="jdbc:mysql://localhost:3306/ssm-demo"/>
+                  value="jdbc:mysql://localhost:3306/gitchat_ssm_demo_db?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;useSSL=true"/>
         <!-- 改为你的地址即可 -->
         <property name="username" value="root"/>
         <property name="password" value="131313"/>
@@ -30,7 +30,7 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <!-- 自动扫描mappers.xml文件 -->
-        <!--<property name="mapperLocations" value="classpath:mappers/*.xml"></property>-->
+        <property name="mapperLocations" value="classpath:mappers/*.xml"></property>
         <!-- mybatis配置文件 -->
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
     </bean>
